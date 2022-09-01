@@ -1,13 +1,13 @@
-# TP1
-## Thème et plugin  Wordpress
-### Contient 12 commits
+# Thème collège de maisonneuve
+### Développement d'un site constitué de plusieurs modèles,  gabarits de modèle et modèle de page «template» utilisant les champs personnalisés et plusieurs animations/transitions Javascript/CSS 
 
-[github-page](https://eddytuto.github.io/theme-31w)
-> Le thème utilise une structure de grid pour formater le layout
+Accéder au Site web: 
+[SiteGround](/)
 
+Accéder à la github page:
+[Github page](https://github.com/Car0lann3/wp-cdc)
 
 Pour plus d'information sur la conception de thème
-[WP developper guide](https://developper.wordpress.org/theme)
+[wp developper guide](https://developer.wordpress.org/)
 
-Pour plus d'information sur la structure grid
-[css-tricks/grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+![alt text](./public/517.jpg)
