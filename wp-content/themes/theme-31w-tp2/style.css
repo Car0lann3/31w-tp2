@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /*! 
-Theme Name: 31W-cours 
-Author: Eddy Martin
+Theme Name: 31W-cours-CdC
+Author: Carolanne
 Author URI: http://github.com/eddytuto
-Description: Thème de base pour le cours de 31W
+Description: Thème pour le cours d'intro 31W
 Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.4
@@ -479,16 +479,16 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: #4169e1;
+  color: green;
   font-family: "Roboto", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 a:visited {
-  color: #800080;
+  color: darkgreen;
 }
 
 a:hover, a:focus, a:active {
-  color: #191970;
+  color: lightgreen;
 }
 
 a:focus {
@@ -652,14 +652,14 @@ textarea {
 }
 
 .menu__sidebar__ul .menu-item a:hover {
-  background-color: #a4dbe9;
+  background-color: #cdcdcd;
 }
 
 /**
 * block menu de la page d'accueil
 */
 .menu-accueil-container {
-  margin-top: 50px;
+  margin-top: 100px;
   background-color: beige;
 }
 
@@ -726,24 +726,24 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
 
 .site__header {
   grid-area: header;
-  background-color: #7bcbdf;
+  background-color: #b3b3b3;
 }
 
 .site__main {
   grid-area: main;
   overflow: hidden;
   /* Resolves issue with <pre> elements forcing full width. */
-  background-color: #a4dbe9;
+  background-color: #cdcdcd;
 }
 
 .site__sidebar {
   grid-area: sidebar;
-  background-color: #cdebf3;
+  background-color: #e6e6e6;
 }
 
 .site__footer {
   grid-area: footer;
-  background-color: #7bcbdf;
+  background-color: #b3b3b3;
 }
 
 @media screen and (min-width: 700px) {
