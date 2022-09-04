@@ -5,16 +5,6 @@ if ( ! defined( '_S_VERSION' ) ) {
 }
 //////////////////////////////////////////////
 
-/*
-if (!extension_loaded('imagick')){
-    echo 'imagick not installed';
-}
-else{
-    echo 'imagick is installed';
-}
-*/
-
-// phpinfo();
 ///////////////////////////////////////////////
 function mon_31w_setup() {
 	add_theme_support( 'title-tag' );
@@ -29,7 +19,11 @@ function mon_31w_setup() {
 } 
 add_action( 'after_setup_theme', 'mon_31w_setup' );
 
-
+    /**
+    * Permet de modifier la requête principale pour extraire 
+    * uniquement les articles de catégories "accueil"
+    * @param: 
+     */
     function mon_31w_enqueue() {
         wp_enqueue_style( 	'mon_31w-style', 
                             get_stylesheet_uri(),

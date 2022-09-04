@@ -2,8 +2,8 @@
 /**
  * Plugin name: Carrousel
  * Description: Carrousel d'images créé à partir d'une galerie d'images
- * Author: Eddy Martin
- * Plugin URI: https://github.com/eddytuto
+ * Author: Caro
+ * Plugin URI: https://github.com/Car0lann3
  */
 function carrousel_31w_enqueue()
 {

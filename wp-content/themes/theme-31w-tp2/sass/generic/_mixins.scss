@@ -1,0 +1,78 @@
+/*------------------------------------*\
+  mixins /
+\*------------------------------------*/
+
+
+@mixin btn(
+    $border-color: $color-black,
+    $background-color: transparent,
+    $color: $color-black,
+    $background-color-hover: $color-black,
+    $color-hover: $color-white
+) {
+    border: solid $border-color 2px;
+    background-color: $background-color;
+    color: $color;
+    position: relative;
+    transition: color $transition-normal $ease-out-cubic;
+    z-index: $z-index-floor;
+
+    &::before {
+        content: "";
+        background-color: $background-color-hover;
+        height: 100%;
+        right: 0;
+        position: absolute;
+        top: 0;
+        transition: width $transition-normal $ease-out-cubic;
+        width: 0;
+        z-index: $z-index-minus;
+    }
+
+    &:hover {
+        color: $color-hover;
+
+        &::before {
+            left: 0;
+            width: 100%;
+        }
+    }
+}
+
+
+@mixin chevron($direction) {
+    position: relative;
+    width: fit-content;
+
+    &::before {
+        content: '';
+        border-style: solid;
+        border-width: .18em .18em 0 0;
+        display: inline-block;
+        height: .6em;
+        position: absolute;
+        transition: transform $transition-normal ease;
+        width: .6em;
+
+        @if $direction == 'top' {
+            right: -1.5em;
+            top: .5em;
+            transform: rotate(-45deg);
+        }
+        @else if $direction == 'right' {
+            right: -1.5em;
+            top: .4em;
+            transform: rotate(45deg);
+        }
+        @else if $direction == 'bottom' {
+            right: -1.5em;
+            top: .2em;
+            transform: rotate(135deg);
+        } 
+        @else if $direction == 'left' {
+            left: -1em;
+            top: .4em;
+            transform: rotate(-135deg);
+        }
+    }
+}

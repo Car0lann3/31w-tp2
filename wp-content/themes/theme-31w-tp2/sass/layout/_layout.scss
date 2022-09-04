@@ -1,0 +1,30 @@
+/* center the section on the user's device*/
+.mx-width {
+    /* min-value: 600px 
+       max-value:1200px 
+       otherwise 85% of device width 
+   */
+   max-width: clamp(600px, 90vw, 1500px);
+   margin-right: auto;
+   margin-left: auto;
+ 
+   padding: 20px 20px;
+ }
+ 
+ /* Vertical flow between section */
+ 
+ 
+ .main_layout > * + * {
+   margin-top: 70px;
+ }
+ 
+ 
+ .flow {
+   padding: 15px;
+ }
+ .flow > * + * {
+   margin-top: 20px;
+ }
+
+
+

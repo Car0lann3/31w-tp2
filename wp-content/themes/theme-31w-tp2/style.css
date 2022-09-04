@@ -46,6 +46,45 @@ Text Domain: 31-w
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
+/*------------------------------------*\
+  breakpoints 
+\*------------------------------------*/
+/*------------------------------------*\
+  ease 
+\*------------------------------------*/
+/*------------------------------------*\
+  space 
+\*------------------------------------*/
+:root {
+  --space-base: 5px;
+  --space-xsmall: calc(var(--space-base) * 3);
+  --space-small: calc(var(--space-base) * 5);
+  --space-medium: calc(var(--space-base) * 8);
+  --space-large: calc(var(--space-base) * 10);
+  --space-xlarge: calc(var(--space-base) * 20);
+}
+
+@media only screen and (min-width: 768px) {
+  :root {
+    --space-base: 1vw;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  :root {
+    --space-base: .8vw;
+  }
+}
+
+/*------------------------------------*\
+  transitions
+\*------------------------------------*/
+/*------------------------------------*\
+  z-index
+\*------------------------------------*/
+/*------------------------------------*\
+  mixins /
+\*------------------------------------*/
 /* Normalize
 --------------------------------------------- */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -479,16 +518,16 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: green;
+  color: #0d337d;
   font-family: "Roboto", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 a:visited {
-  color: darkgreen;
+  color: #003cb4;
 }
 
 a:hover, a:focus, a:active {
-  color: lightgreen;
+  color: #0d52db;
 }
 
 a:focus {
@@ -652,7 +691,7 @@ textarea {
 }
 
 .menu__sidebar__ul .menu-item a:hover {
-  background-color: #cdcdcd;
+  background-color: white;
 }
 
 /**
@@ -726,24 +765,24 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
 
 .site__header {
   grid-area: header;
-  background-color: #b3b3b3;
+  background-color: white;
 }
 
 .site__main {
   grid-area: main;
   overflow: hidden;
   /* Resolves issue with <pre> elements forcing full width. */
-  background-color: #cdcdcd;
+  background-color: white;
 }
 
 .site__sidebar {
   grid-area: sidebar;
-  background-color: #e6e6e6;
+  background-color: white;
 }
 
 .site__footer {
   grid-area: footer;
-  background-color: #b3b3b3;
+  background-color: white;
 }
 
 @media screen and (min-width: 700px) {
@@ -754,4 +793,250 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
 }
 
 /* @import "no-sidebar"; */
+/* center the section on the user's device*/
+.mx-width {
+  /* min-value: 600px 
+       max-value:1200px 
+       otherwise 85% of device width 
+   */
+  max-width: clamp(600px, 90vw, 1500px);
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px 20px;
+}
+
+/* Vertical flow between section */
+.main_layout > * + * {
+  margin-top: 70px;
+}
+
+.flow {
+  padding: 15px;
+}
+
+.flow > * + * {
+  margin-top: 20px;
+}
+
+/*------------------------------------*\
+  grid / components *refacto space*
+\*------------------------------------*/
+.grid {
+  display: grid;
+}
+
+.grid--2,
+.grid--3,
+.grid--4,
+.grid--6 {
+  grid-gap: 30px;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media only screen and (min-width: 550px) {
+  .grid--2,
+  .grid--3,
+  .grid--4,
+  .grid--6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .grid--3,
+  .grid--4,
+  .grid--6 {
+    grid-gap: 2.5vw;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .grid--4 {
+    grid-gap: 1.75vw;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .grid--6 {
+    grid-gap: 1.25vw;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* 
+/* .grid 
+@media (min-width: 700px) {
+    .grid {
+        display: flex;
+        column-gap: 40px;
+        align-items: center;
+    }
+
+    
+    .grid > * {
+        width: calc(50% - 40px);
+    }
+}
+
+.grid img {
+    min-height: 45vh;
+}
+
+
+.grid h3 {
+    cursor: pointer;
+}
+
+
+/* .grid_3 */
+/* .grid 
+@media (min-width: 700px) {
+    .grid_3 {
+        display: flex;
+        column-gap: 40px;
+        align-items: center;
+    }
+
+    .grid_3 > * {
+        width: calc(33% - 40px);
+    }
+
+}
+
+.grid_3 h4 {
+    cursor: pointer;
+}
+
+
+  gird_wrap 
+
+ .gird_wrap {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+
+     column-gap: 30px;
+     row-gap: 50px;
+ }
+
+ .gird_wrap > article {
+     max-width: 80ch;
+ }
+
+/* grid_accueil */
+/* .grid */
+/* @media (min-width: 700px) {
+    .grid_accueil {
+        display: flex;
+        justify-content: center;
+        column-gap: 70px;
+        align-items: center;
+    }
+
+    .grid_accueil > * {
+        width: calc(43% - 40px);
+    }
+
+} 
+
+.grid_accueil > section {
+    max-width: 100ch;
+}
+
+.grid_accueil > div + div {
+    margin-top: 50px;
+}
+
+.grid_accueil > div > * + * {
+    margin-top: 20px;
+} */
+/*------------------------------------*\
+  tile / components
+\*------------------------------------*/
+.tile {
+  background-color: #ccc;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 50vw;
+  width: 100%;
+}
+
+.tile:hover .tile__image {
+  transform: scale(1.05);
+}
+
+.tile:hover .tile__link::before {
+  transform: translateX(0.75em) rotate(45deg);
+}
+
+.tile__image-wrapper {
+  display: flex;
+  height: 20vw;
+  min-height: 200px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.tile__image {
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  width: 100%;
+}
+
+.tile__detail {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 30px 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .tile__detail {
+    padding: 2vw;
+  }
+}
+
+.tile__title {
+  display: flex;
+  flex-direction: column;
+}
+
+.tile__description {
+  margin: 10px 0 15px;
+  font-size: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .tile__description {
+    margin: 1.5vw 0 2vw;
+  }
+}
+
+.tile__link {
+  display: inline-block;
+  letter-spacing: .02em;
+  margin-top: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.tile__link::before {
+  content: '';
+  border-style: solid;
+  border-width: .18em .18em 0 0;
+  display: inline-block;
+  height: .6em;
+  position: absolute;
+  transition: transform 0.3s ease;
+  width: .6em;
+  right: -1.5em;
+  top: .4em;
+  transform: rotate(45deg);
+}
 /*# sourceMappingURL=style.css.map */

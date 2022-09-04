@@ -52,6 +52,7 @@ Text Domain: 31-w
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
+@import "generic/mixins";
 
 /* Normalize
 --------------------------------------------- */
@@ -68,13 +69,19 @@ Text Domain: 31-w
 /*--------------------------------------------------------------
 # Composante
 --------------------------------------------------------------*/
+@import "composante/bg";
+@import "composante/blocs__horizontaux"; // navigation sidebar
+@import "composante/btn";
 @import "composante/nav_sidebar"; // navigation sidebar
 @import "composante/nav_accueil"; // navigation accueil
-@import "composante/blocs__horizontaux"; // navigation sidebar
+@import "composante/text-img";
 /*--------------------------------------------------------------
 
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
+@import "layout/grid";
+@import "layout/header";
+@import "layout/layout";
 @import "layout/sidebar-content";
-
+@import "layout/tile";

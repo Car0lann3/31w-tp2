@@ -20,6 +20,7 @@
          $heure = get_field("heure");
          $organisateur = get_field("organisateur");
          $resume = get_field("description");
+         echo "<p class='annonce__titre'>" . 'cours' . $titre . "</p>";
          echo "<p class='annonce__resume'>" . 'cours' . $description . "</p>";
          echo "<p class='annonce__lieu'>Le lieu: " . $endroit . "</p>";
          echo "<p class='annonce__date'>La date: " . $date . "</p>";

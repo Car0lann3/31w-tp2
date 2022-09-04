@@ -1,0 +1,36 @@
+/*------------------------------------*\
+  btn / 
+\*------------------------------------*/
+
+
+.btn {
+    display: inline-block;
+    letter-spacing: .04em;
+    margin-top: 30px;
+    width: fit-content;
+
+    @media only screen and (min-width: $tablet) {
+        margin-top: 3vw;
+    }
+}
+
+.btn--primary {
+    padding: 25px 40px;
+    
+    @media only screen and (min-width: $tablet) {
+        padding: 2vw 4vw;
+    }
+}
+   
+.btn--secondary {
+    padding: 15px 25px;
+    
+    @media only screen and (min-width: $tablet) {
+        padding: 1.5vw 3vw;
+    }
+}
+
+
+.btn--hollow-black {
+    @include btn();
+}
