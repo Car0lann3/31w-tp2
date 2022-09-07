@@ -26,12 +26,17 @@
                 </h2>
             </section>
 
-            
-            <nav class="site__navigation">
-            Menu
-            </nav>
         </header>
 
+        <section class="menu__accueil">
+        <?php wp_nav_menu(array(
+                'menu' => 'menu accueil',
+                'container' => 'nav',
+                'container_class' => '',
+
+            ));
+            ?>
+        </section>
 
         <section class="site__sidebar">
 

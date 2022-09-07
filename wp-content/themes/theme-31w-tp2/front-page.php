@@ -8,8 +8,18 @@
             <a class="hero_link" href="">Lire plus</a>
         </div>
     </div>
-    
-    
+    <?php wp_nav_menu(array(
+                'menu' => 'menu accueil',
+                'container' => 'nav',
+                'container_class' => '',
+
+            ));
+            ?>
+    <?php wp_nav_menu(array(
+                        'menu' => 'accueil',
+                        'container' => 'nav',
+                      
+            )) ?>
     
     <article class="grid__accueil">
         <?php if(have_posts() ) : ?>
@@ -65,13 +75,7 @@
         
     <h4>Plus d'information sur nos</h4>
     
-    <?php wp_nav_menu(array(
-                'menu' => 'menu accueil',
-                'container' => 'nav',
-                'container_class' => '',
 
-            ));
-            ?>
 
 </section>
 

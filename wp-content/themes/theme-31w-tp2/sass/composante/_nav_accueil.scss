@@ -6,16 +6,24 @@
 .menu-accueil-container{
     margin-top: 100px;
     background-color: beige;
+
+    @media only screen and (min-width: 700px) {
+        display: none;
+    }
 }
 
 .menu-accueil-container .menu{
     display : flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    //align-items: center;
+//  flex-wrap: ;
 }
 
 .menu-accueil-container .menu .menu-item {
     list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     margin : 0;
     padding : 0;
     border : 1px solid #aaa;
@@ -27,3 +35,12 @@
     text-decoration: none;
 }
 
+.menu{
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-accueil-container {
+
+    
+}
